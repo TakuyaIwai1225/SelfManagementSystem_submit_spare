@@ -1,12 +1,16 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" ?>
-    <%= wicked_pdf_stylesheet_link_tag 'pdf' %>
-  <head>
-  <body>
-    <div class="header">header</div>
-    <h1>テストだよ<_h1>
-    <%= yield %>
-    <div class="footer">footer</div>
+    <title>Self Management System</title>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "application" %>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <body onload='number_pages'>
+    <div id="header">
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
   </body>
 </html>

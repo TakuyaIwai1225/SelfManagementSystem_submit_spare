@@ -8,8 +8,8 @@
       <% if current_user.id == thinking.user_id %>
       <div class="col-xs-12 col-md-12 panel panel-default">
         <h2><%= thinking.factor %></h2>
-        <p>Created_at: <%= thinking.created_at.strftime("%Y-%m-%d%H:%M") %></p>
-        <p>Updated_at: <%= thinking.updated_at.strftime("%Y-%m-%d%H:%M") %></p>
+        <p>Created_at: <%= thinking.created_at.strftime("%Y-%m-%d%H:%M") %> (Japan)</p>
+        <p>Updated_at: <%= thinking.updated_at.strftime("%Y-%m-%d%H:%M") %> (Japan)</p>
           <div class="blog-links">
             <%= link_to '詳細', thinking, class: 'btn btn-default' %>
             <%= link_to '編集', edit_thinking_path(thinking), class: 'btn btn-info' %> 

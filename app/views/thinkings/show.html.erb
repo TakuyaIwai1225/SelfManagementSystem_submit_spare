@@ -17,9 +17,9 @@
       <%= @thinking.action_plan10 %><br> 
     </p> 
     <% if @relationship.present? %>
-      <%= link_to 'Routineを解除する', relationship_path(id: @relationship.id), method: :delete, class: 'btn btn-danger' %>
+      <%= link_to '習慣化を解除する', relationship_path(id: @relationship.id), method: :delete, class: 'btn btn-danger' %>
     <% else %>
-      <%= link_to 'Routineへ', relationships_path(thinking_id: @thinking.id), method: :post, class: 'btn btn-primary' %>
+      <%= link_to '習慣化する', relationships_path(thinking_id: @thinking.id), method: :post, class: 'btn btn-primary' %>
     <% end %>
   </aside>
 </div>

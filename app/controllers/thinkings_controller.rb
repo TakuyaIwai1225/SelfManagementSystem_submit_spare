@@ -51,15 +51,21 @@ class ThinkingsController < ApplicationController
   end
   
   def download
+    @routine_actions = current_user.routine_actions
     respond_to do |format|
-        format.html
-        format.pdf do
-            render :pdf      => 'routine_check_sheet', # 出力される際のファイル名
-                   :template => 'download.pdf.erb', # どのViewファイルを使用するか
-                   :layout   => 'pdf.html.erb', # どのレイアウトファイルを使用するか
-                   :encoding => 'UTF-8' # 日本語を使う場合は指定してください
-        end
-    end  
+      format.html { redirect_to action: :download, format: :pdf, debug: true }
+      format.pdf do
+        render pdf: "テスト",
+               encoding: 'UTF-8',
+               template: 'thinkings/download.pdf.erb',
+               layout: 'pdf.html',
+               orientation: 'Landscape',
+               page_size:   'A3',
+               print_media_type:               true,
+               save_to_file:                   Rails.root.join('pdfs', "#{routine}.pdf"),
+               show_as_html: params[:debug].present?
+          end
+      end  
   end
   
   private

@@ -1,1 +1,45 @@
-テスト
+<div class="container">
+  <h1>習慣形成表</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr class="info">
+        <th>日付</th>
+        <% 14.times do %>
+        <th></th>
+        <% end %>
+        <th class="warning"><集計></th>
+      </tr>
+    </thead> 
+    <tbody>   
+      <tr>
+        <td>
+          <% @routine_actions.each do |thinking| %>
+            <p><<%= thinking.factor %>></p>      
+            <p><%= thinking.action_plan1 %></p>
+            <p><%= thinking.action_plan2 %></p>
+            <p><%= thinking.action_plan3 %></p>
+            <p><%= thinking.action_plan4 %></p>
+            <p><%= thinking.action_plan5 %></p>
+            <p><%= thinking.action_plan6 %></p>
+            <p><%= thinking.action_plan7 %></p>
+            <p><%= thinking.action_plan8 %></p>
+            <p><%= thinking.action_plan9 %></p>
+            <p><%= thinking.action_plan10 %></p>
+          <% end %>    
+        </td>
+        <% 14.times do %>
+        <td></td>
+        <% end %>
+        <td class="warning"></td>
+      </tr>
+      <tr class="warning">
+        <td>
+          <集計>
+        </td>
+        <% 15.times do %>
+        <td></td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>

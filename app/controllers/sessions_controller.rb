@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       redirect_back_or user
-      flash[:success] = "logged in! Hello. #{current_user.name}"
+      flash[:success] = "ログインしました! こんにちは、#{current_user.name} 様!"
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
