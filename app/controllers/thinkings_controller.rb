@@ -55,15 +55,11 @@ class ThinkingsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to action: :download, format: :pdf, debug: true }
       format.pdf do
-        render pdf: "テスト",
-               encoding: 'UTF-8',
-               template: 'thinkings/download.pdf.erb',
-               layout: 'pdf.html',
-               orientation: 'Landscape',
-               page_size:   'A3',
-               print_media_type:               true,
-               save_to_file:                   Rails.root.join('pdfs', "#{routine}.pdf"),
-               show_as_html: params[:debug].present?
+        render pdf: "pdf_download_test",   # PDFのファイル名
+               encording: 'UTF-8',         # エンコード指定
+               layout: 'layouts/pdf.html', # PDF用の共通レイアウト
+               # trueを指定すると、HTML画面として確認ができる
+               show_as_html: params[:show_as_html].present?
           end
       end  
   end
