@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Routine_check_sheet</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <%= wicked_pdf_stylesheet_link_tag    'application', 'data-turbolinks-track': 'reload' %>
-    <%= wicked_pdf_javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>Self Management System</title>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "application" %>
   </head>
-  <body>
-
-    <%= yield %>
-
+  <body onload='number_pages'>
+    <div id="header">
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
   </body>
 </html>
