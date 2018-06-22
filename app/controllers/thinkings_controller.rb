@@ -55,8 +55,9 @@ class ThinkingsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to action: :download, format: :pdf, debug: true }
       format.pdf do
-        render pdf: "pdf_download_test",   # PDFのファイル名
+        render pdf: "routine_check_sheet",   # PDFのファイル名
                encording: 'UTF-8',         # エンコード指定
+               page_size: 'A3',
                layout: 'layouts/pdf.html', # PDF用の共通レイアウト
                # trueを指定すると、HTML画面として確認ができる
                show_as_html: params[:show_as_html].present?
