@@ -234,20 +234,11 @@ body {
   font-family: 'Arial' !important;
 }
 
-@font-face {
-    font-family: 'HDVPeace';
-    src: url('/assets/HDV_Peace.eot');
-    src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
-         url('/assets/HDV_Peace.woff') format('woff'),
-         url('/assets/HDV_Peace.ttf') format('truetype'),
-         url('/assets/HDV_Peace.svg#webfont') format('svg');
-}
-
 html {
   font-family: 'IPAexゴシック', 'IPA Pゴシック', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'MS Pゴシック', sans-serif;
 }
 
 @font-face {
    font-family: 'IPA明朝';
-   src: url('<%= asset_path "ipam.ttf" %>') format('truetype');
+   src: url('<%= asset_path "ipaexg.ttf" %>') format('truetype');
 }
