@@ -1,9 +1,0 @@
-<li>
-  <%= link_to user.name, user %>
-  <% if current_user.admin? %>
-    | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-  <% end %>
-</li>
-<!--ユーザーインデックスに表示するパーシャルを定義している。-->
-<!--ユーザー画像も表示できるようにする。twitter_likeの_userを参照する>
