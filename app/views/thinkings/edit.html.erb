@@ -4,7 +4,7 @@
     
     <% if @thinking.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@thinking.errors.count, "error") %> prohibited this @user from being saved:</h2>
+        <h2><%= pluralize(@thinking.errors.count, "error") %></h2>
         <ul>
         <% @thinking.errors.full_messages.each do |message| %>
           <li><%= message %></li>

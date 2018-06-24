@@ -4,16 +4,17 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       
-        <% if @thinking.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@thinking.errors.count, "error") %> prohibited this @user from being saved:</h2>
-            <ul>
-            <% @thinking.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
+    <% if @thinking.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@thinking.errors.count, "error") %></h2>
+        <ul>
+        <% @thinking.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
         <% end %>
+        </ul>
+      </div>
+    <% end %>
+
         <%= form_for(@thinking) do |f| %>
         
         <%= f.label :factor %>

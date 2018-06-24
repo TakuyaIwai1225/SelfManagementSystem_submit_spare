@@ -12,7 +12,7 @@ class ThinkingsController < ApplicationController
       flash[:success] = "新たな思考を追加しました!"
       redirect_to thinkings_path
     else
-      redirect_to new_thinking_path
+      render 'new'
     end
   end
   
