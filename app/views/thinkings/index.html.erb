@@ -22,14 +22,14 @@
 
   <div class="routine_index">
     <h1>
-      routine一覧
+      手に入れたい要素・スキル一覧
     </h1>
   </div>
 
   <div class="row">
     <% @routine_actions.each do |thinking| %>
       <div class="col-xs-12 col-md-12 blog-panel">
-        <h2><%= thinking.factor %></h2>
+        <h2 class="well"><%= thinking.factor %></h2>
       </div>
     <% end %>
   </div>
